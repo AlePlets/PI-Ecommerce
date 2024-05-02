@@ -13,3 +13,7 @@
 
 Username: admin@mail.com
 Password: Password@123
+
+
+INSERT INTO admins (admin_email, admin_pass, admin_name, admin_image, admin_contact, admin_country, admin_job, admin_about) VALUES
+('admin@mail.com', 'Password@123', 'Admin Name', 'user-profile-min.png', '999999999', 'Your Country', 'Your Job Title', 'About the Admin');
