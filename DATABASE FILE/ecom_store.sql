@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 15-Mar-2024 às 02:57
+-- Tempo de geração: 21-Mar-2024 às 23:05
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -209,22 +209,6 @@ CREATE TABLE `customer_orders` (
   `order_status` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
---
--- Extraindo dados da tabela `customer_orders`
---
-
-INSERT INTO `customer_orders` (`order_id`, `customer_id`, `due_amount`, `invoice_no`, `qty`, `size`, `order_date`, `order_status`) VALUES
-(17, 2, 100, 1715523401, 2, 'Large', '2017-02-20 08:21:42', 'pending'),
-(23, 3, 20, 1762810884, 1, 'Medium', '2021-09-14 08:35:57', 'Complete'),
-(24, 4, 100, 1972602052, 1, 'Large', '2021-09-14 16:37:52', 'Complete'),
-(25, 4, 90, 2008540778, 1, 'Medium', '2021-09-14 16:43:15', 'pending'),
-(27, 5, 120, 2138906686, 1, 'Small', '2021-09-15 03:18:41', 'Complete'),
-(28, 5, 180, 361540113, 2, 'Medium', '2021-09-15 03:25:42', 'Complete'),
-(29, 3, 100, 858195683, 1, 'Large', '2021-09-15 03:14:01', 'Complete'),
-(31, 6, 245, 901707655, 1, 'Medium', '2021-09-15 03:52:18', 'Complete'),
-(32, 6, 75, 2125554712, 1, 'Large', '2021-09-15 03:52:58', 'pending'),
-(33, 7, 0, 1488867661, 0, '', '2024-03-12 01:31:24', 'pending');
-
 -- --------------------------------------------------------
 
 --
@@ -305,7 +289,8 @@ INSERT INTO `payments` (`payment_id`, `invoice_no`, `amount`, `payment_mode`, `r
 (22, 2138906686, 120, 'Bank Code', 1450000020, 202020, '09-15-2021'),
 (23, 361540113, 180, 'Western Union', 1470000020, 12001, '09-15-2021'),
 (24, 361540113, 180, 'UBL/Omni', 1258886650, 200, '09-15-2021'),
-(25, 901707655, 245, 'Western Union', 1200002588, 88850, '09-15-2021');
+(25, 901707655, 245, 'Western Union', 1200002588, 88850, '09-15-2021'),
+(26, 1154140582, 18, 'Bank Code', 5416, 33333333, '20/03/2024');
 
 -- --------------------------------------------------------
 
@@ -328,9 +313,7 @@ CREATE TABLE `pending_orders` (
 --
 
 INSERT INTO `pending_orders` (`order_id`, `customer_id`, `invoice_no`, `product_id`, `qty`, `size`, `order_status`) VALUES
-(24, 4, 1972602052, '5', 1, 'Large', 'Complete'),
-(29, 3, 858195683, '5', 1, 'Large', 'Complete'),
-(33, 7, 1488867661, '19', 0, '', 'pending');
+(36, 7, 1154140582, '20', 1, '', 'Complete');
 
 -- --------------------------------------------------------
 
@@ -349,8 +332,8 @@ CREATE TABLE `products` (
   `product_img1` text NOT NULL,
   `product_img2` text NOT NULL,
   `product_img3` text NOT NULL,
-  `product_price` int(10) NOT NULL,
-  `product_psp_price` int(100) NOT NULL,
+  `product_price` decimal(10,2) NOT NULL,
+  `product_psp_price` decimal(10,2) NOT NULL,
   `product_desc` text NOT NULL,
   `product_features` text NOT NULL,
   `product_video` text NOT NULL,
@@ -364,7 +347,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `p_cat_id`, `cat_id`, `manufacturer_id`, `date`, `product_title`, `product_url`, `product_img1`, `product_img2`, `product_img3`, `product_price`, `product_psp_price`, `product_desc`, `product_features`, `product_video`, `product_keywords`, `product_label`, `status`) VALUES
-(5, 7, 2, 2, '2024-03-15 01:46:00', 'Vitamina D ', 'product-url-5', 'vitad.jpg', 'vitaminad.jpg', 'suplemento_de_vitamina_d_2000_ui_2547_2_cc946cfa8088564b929d0685340640f2.webp', 53, 100, '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', 'vitamina D', 'Produto', 'product'),
+(5, 7, 2, 2, '2024-03-21 02:21:06', 'Vitamina D ', 'product-url-5', 'vitad.jpg', 'vitaminad.jpg', 'suplemento_de_vitamina_d_2000_ui_2547_2_cc946cfa8088564b929d0685340640f2.webp', 55, 55, '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nA vitamina D 2000 UI  é um hormônio lipossolúvel essencial para o corpo humano e sua ausência pode proporcionar uma série de complicações. Afinal, ela controla 270 genes, inclusive células do sistema cardiovascular.\r\n \r\nA principal fonte de produção da vitamina se dá por meio da exposição solar, pois os raios ultravioletas do tipo B (UVB) são capazes de ativar a síntese desta substância. Alguns alimentos, especialmente peixes gordos, são fontes de vitamina D, mas é o sol o responsável por 80 a 90% da vitamina que o corpo recebe.\r\n \r\nEla também pode ser produzida em laboratório e ser administrada na forma de suplemento, quando há a deficiência e para a prevenção e tratamento de uma série de doenças.\r\n \r\nEsta substância ainda age na secreção hormonal e em diversas doenças crônicas não transmissíveis, entre elas a síndrome metabólica que tem como um dos componentes o diabetes tipo 2.\r\n \r\nA vitamina D é necessária para a manutenção do tecido ósseo, ela também influencia consideravelmente no sistema imunológico, sendo interessante para o tratamento de doenças autoimunes, como a artrite reumatoide e a esclerose múltipla, e no processo de diferenciação celular.\r\n \r\nApresentação: Frasco 60 cápsulas de 430mg.\r\n \r\nRecomendação de  uso: ingerir  1 cápsula ao dia\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nIngredientes: Óleo de girassol, colecalciferol e antioxidante dl-alfa tocoferol.\r\nComposição da capsula: Gelatina, água purificada, umectante glicerina e corante natural cúrcuma. Não Contem Glúten.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n', 'vitamina D', 'Produto', 'product'),
 (16, 6, 3, 3, '2024-03-15 01:28:46', 'Dipirona', 'product-url-1', 'dipirona 1.jpg', 'dipirona neo quimica R$ 4,99.jpg', 'dipirona.jpg', 4, 4, '\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n', 'antipirético', 'Produto', 'product'),
 (17, 4, 5, 4, '2024-03-15 01:42:06', 'Hipoglós', 'product-url-2', 'hipoglos erifarma 49,90.jpg', 'hipoglos.jpg', 'hipoglos1.jpg', 49, 49, '\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n', 'pomada', 'Produto', 'product'),
 (18, 8, 4, 5, '2024-03-15 01:52:17', 'Expec', 'product-url-3', 'expec 32.jpg', 'expec.jpg', 'expec1.jpg', 32, 32, '\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\n', 'Xarope', 'Produto', 'product'),
@@ -462,7 +445,8 @@ INSERT INTO `wishlist` (`wishlist_id`, `customer_id`, `product_id`) VALUES
 (2, 2, 8),
 (3, 5, 13),
 (4, 3, 13),
-(5, 6, 15);
+(5, 6, 15),
+(6, 7, 19);
 
 --
 -- Índices para tabelas despejadas
@@ -626,7 +610,7 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT de tabela `customer_orders`
 --
 ALTER TABLE `customer_orders`
-  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT de tabela `enquiry_types`
@@ -644,13 +628,13 @@ ALTER TABLE `manufacturers`
 -- AUTO_INCREMENT de tabela `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `payment_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `payment_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de tabela `pending_orders`
 --
 ALTER TABLE `pending_orders`
-  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT de tabela `products`
@@ -680,7 +664,7 @@ ALTER TABLE `terms`
 -- AUTO_INCREMENT de tabela `wishlist`
 --
 ALTER TABLE `wishlist`
-  MODIFY `wishlist_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `wishlist_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

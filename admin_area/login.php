@@ -24,15 +24,15 @@ include("includes/db.php");
 
 <form class="form-login" action="" method="post" ><!-- form-login Starts -->
 
-<h2 class="form-login-heading" >Admin Login</h2>
+<h2 class="form-login-heading" >Area do Administrador</h2>
 
-<input type="text" class="form-control" name="admin_email" placeholder="Email Address" required >
+<input type="text" class="form-control" name="admin_email" placeholder="Email" required >
 
-<input type="password" class="form-control" name="admin_pass" placeholder="Password" required >
+<input type="password" class="form-control" name="admin_pass" placeholder="Senha" required >
 
 <button class="btn btn-lg btn-primary btn-block" type="submit" name="admin_login" >
 
-Log in
+Entrar
 
 </button>
 
@@ -65,14 +65,14 @@ if($count==1){
 
 $_SESSION['admin_email']=$admin_email;
 
-echo "<script>alert('You are Logged in into admin panel')</script>";
+echo "<script>alert('Você está conectado ao painel do Administrador!!!')</script>";
 
 echo "<script>window.open('index.php?dashboard','_self')</script>";
 
 }
 else {
 
-echo "<script>alert('Email or Password is Wrong')</script>";
+echo "<script>alert('Email ou senha está errada!!!')</script>";
 
 }
 

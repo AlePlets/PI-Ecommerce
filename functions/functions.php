@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect("10.20.0.2","ale","123","ecom_store");
+$db = mysqli_connect("localhost","root","","ecom_store");
 
 /// IP address code starts /////
 function getRealUserIp(){
@@ -115,16 +115,16 @@ $pro_url = $row_products['product_url'];
 
 if($pro_label == "Sale" or $pro_label == "Gift"){
 
-$product_price = "<del> R$$pro_price </del>";
+$product_price = "<del> R$$pro_price,00 </del>";
 
-$product_psp_price = "| R$$pro_psp_price";
+$product_psp_price = "| R$$pro_psp_price,00";
 
 }
 else{
 
 $product_psp_price = "";
 
-$product_price = "R$$pro_price";
+$product_price = "R$$pro_price,00";
 
 }
 
@@ -322,16 +322,16 @@ $pro_url = $row_products['product_url'];
 
 if($pro_label == "Sale" or $pro_label == "Gift"){
 
-$product_price = "<del> R$$pro_price </del>";
+$product_price = "<del> R$$pro_price,00 </del>";
 
-$product_psp_price = "| R$$pro_psp_price";
+$product_psp_price = "| R$$pro_psp_price,00";
 
 }
 else{
 
 $product_psp_price = "";
 
-$product_price = "R$$pro_price";
+$product_price = "R$$pro_price,00";
 
 }
 
@@ -506,7 +506,7 @@ echo "<li><a href='shop.php?page=1";
 
 if(!empty($aPath)){ echo "&".$aPath; }
 
-echo "' >".'First Page'."</a></li>";
+echo "' >".'Primeira página'."</a></li>";
 
 for ($i=1; $i<=$total_pages; $i++){
 
@@ -518,7 +518,7 @@ echo "<li><a href='shop.php?page=$total_pages";
 
 if(!empty($aPath)){ echo "&".$aPath; }
 
-echo "' >".'Last Page'."</a></li>";
+echo "' >".'Última página'."</a></li>";
 
 /// getPaginator Function Code Ends ///
 

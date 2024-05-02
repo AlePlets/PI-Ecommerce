@@ -128,7 +128,7 @@ $total += $sub_total;
 
 <td>
 
-R$<?php echo $only_price; ?>.00
+R$<?php echo $only_price; ?>,00
 
 </td>
 
@@ -140,7 +140,7 @@ R$<?php echo $only_price; ?>.00
 
 <td>
 
-R$<?php echo $sub_total; ?>.00
+R$<?php echo $sub_total; ?>,00
 
 </td>
 
@@ -156,7 +156,7 @@ R$<?php echo $sub_total; ?>.00
 
 <th colspan="5"> Total </th>
 
-<th colspan="2"> R$<?php echo $total; ?>.00 </th>
+<th colspan="2"> R$<?php echo $total; ?>,00 </th>
 
 </tr>
 
@@ -249,7 +249,7 @@ $coupon_used = $row_coupons['coupon_used'];
 
 if($coupon_limit == $coupon_used){
 
-echo "<script>alert('Your Coupon Code Has Been Expired')</script>";
+echo "<script>alert('Seu código de cupom foi expirado')</script>";
 
 }
 else{
@@ -271,14 +271,14 @@ $update_cart = "update cart set p_price='$coupon_price' where p_id='$coupon_pro'
 
 $run_update = mysqli_query($con,$update_cart);
 
-echo "<script>alert('Your Coupon Code Has Been Applied')</script>";
+echo "<script>alert('Seu código de cupom foi aplicado')</script>";
 
 echo "<script>window.open('cart.php','_self')</script>";
 
 }
 else{
 
-echo "<script>alert('Product Does Not Exist In Cart')</script>";
+echo "<script>alert('O produto não existe no carrinho')</script>";
 
 }
 
@@ -287,7 +287,7 @@ echo "<script>alert('Product Does Not Exist In Cart')</script>";
 }
 else{
 
-echo "<script> alert('Your Coupon Code Is Not Valid') </script>";
+echo "<script> alert('Seu código de cupom não é válido') </script>";
 
 }
 
@@ -445,7 +445,7 @@ echo "
 
 <h3><a href='$pro_url' >$pro_title</a></h3>
 
-<p class='price' > $product_price $product_psp_price </p>
+<p class='price' > $product_price $product_psp_price,00 </p>
 
 <p class='buttons' >
 
@@ -509,7 +509,7 @@ Os custos de envio e adicionais são calculados com base nos valores que você i
 
 <td>Subtotal </td>
 
-<th> R$<?php echo $total; ?>.00 </th>
+<th> R$<?php echo $total; ?>,00</th>
 
 </tr>
 
@@ -519,7 +519,7 @@ Os custos de envio e adicionais são calculados com base nos valores que você i
 
 <td>Taxa</td>
 
-<th>R$0.00</th>
+<th>R$0,00</th>
 
 </tr>
 
@@ -527,7 +527,7 @@ Os custos de envio e adicionais são calculados com base nos valores que você i
 
 <td>Total</td>
 
-<th>R$<?php echo $total; ?>.00</th>
+<th>R$<?php echo $total; ?>,00</th>
 
 </tr>
 

@@ -16,7 +16,7 @@ include("includes/main.php");
     <!-- HERO -->
     <div class="nero">
       <div class="nero__heading">
-        <span class="nero__bold">Registro</span> PHARMAPLAIN
+        <span class="nero__bold">Registro PHARMAPLAIN</span> 
       </div>
       <p class="nero__text">
       </p>
@@ -51,7 +51,7 @@ include("includes/main.php");
 
 <div class="form-group" ><!-- form-group Starts -->
 
-<label>nome do cliente</label>
+<label>Nome do cliente</label>
 
 <input type="text" class="form-control" name="c_name" required>
 
@@ -371,7 +371,7 @@ $check_email = mysqli_num_rows($run_email);
 
 if($check_email == 1){
 
-echo "<script>alert('This email is already registered, try another one')</script>";
+echo "<script>alert('Este email já foi registrado, tente um outro !!!')</script>";
 
 exit();
 
@@ -379,25 +379,25 @@ exit();
 
 $customer_confirm_code = mt_rand();
 
-$subject = "Email Confirmation Message";
+$subject = "Email de confirmação";
 
-$from = "sad.ahmed22224@gmail.com";
+$from = "willian.yoshimi@gmail.com";
 
 $message = "
 
 <h2>
-Email Confirmation By Computerfever.com $c_name
+Email de confirmação $c_name
 </h2>
 
 <a href='localhost/ecom_store/customer/my_account.php?$customer_confirm_code'>
 
-Click Here To Confirm Email
+Click aqui para confirmar o Email
 
 </a>
 
 ";
 
-$headers = "From: $from \r\n";
+$headers = "De: $from \r\n";
 
 $headers .= "Content-type: text/html\r\n";
 
@@ -418,7 +418,7 @@ if($check_cart>0){
 
 $_SESSION['customer_email']=$c_email;
 
-echo "<script>alert('You have been Registered Successfully')</script>";
+echo "<script>alert('Você foi registrado com sucesso !!!')</script>";
 
 echo "<script>window.open('checkout.php','_self')</script>";
 
@@ -426,7 +426,7 @@ echo "<script>window.open('checkout.php','_self')</script>";
 
 $_SESSION['customer_email']=$c_email;
 
-echo "<script>alert('You have been Registered Successfully')</script>";
+echo "<script>alert('Você foi registrado com sucesso !!!')</script>";
 
 echo "<script>window.open('index.php','_self')</script>";
 

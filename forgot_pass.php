@@ -13,8 +13,7 @@ include("includes/main.php");
     <!-- HERO -->
     <div class="nero">
       <div class="nero__heading">
-        <span class="nero__bold">Esqueceu a</span> senha
-      </div>
+        <span class="nero__bold">Esqueceu a senha</span>      </div>
       <p class="nero__text">
       </p>
     </div>
@@ -48,7 +47,7 @@ include("includes/main.php");
 
 <center>
 
-<h3> Digite seu e -mail abaixo, enviaremos sua senha </h3>
+<h3> Digite seu e -mail abaixo que enviaremos sua senha </h3>
 
 </center>
 
@@ -62,7 +61,7 @@ include("includes/main.php");
 
 <br>
 
-<input type="submit" name="forgot_pass" class="btn btn-primary" value="Envie minha senha">
+<input type="submit" name="forgot_pass" class="btn btn-primary" value="Enviar minha senha">
 
 </form><!-- form Ends -->
 
@@ -111,7 +110,7 @@ $c_pass = $row_c['customer_pass'];
 
 if($count_c == 0){
 
-echo "<script> alert('Desculpe, não temos seu e -mail') </script>";
+echo "<script> alert('Desculpe, não temos seu e -mail!!!') </script>";
 
 exit();
 
@@ -122,11 +121,11 @@ $message = "
 
 <h1 align='center'> Sua senha foi enviada para você </h1>
 
-<h2 align='center'> Dear $c_name </h2>
+<h2 align='center'> Querido $c_name </h2>
 
 <h3 align='center'>
 
-Your Password is : <span> <b>$c_pass</b> </span>
+Sua senha é : <span> <b>$c_pass</b> </span>
 
 </h3>
 
@@ -134,7 +133,7 @@ Your Password is : <span> <b>$c_pass</b> </span>
 
 <a href='localhost/ecom_store/checkout.php'>
 
-Click Here To Login Your Account
+Click aqui para logar na sua conta
 
 </a>
 
@@ -142,11 +141,11 @@ Click Here To Login Your Account
 
 ";
 
-$from = "sad.ahmed22224@gmail.com";
+$from = "willian.yoshimi@gmail.com";
 
-$subject = "Your Password";
+$subject = "Sua senha";
 
-$headers = "From: $from\r\n";
+$headers = "De: $from\r\n";
 
 $headers .= "Content-type: text/html\r\n";
 

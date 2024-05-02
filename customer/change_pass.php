@@ -60,7 +60,7 @@ $check_old_pass = mysqli_num_rows($run_old_pass);
 
 if($check_old_pass==0){
 
-echo "<script>alert('Your Current Password is not valid try again')</script>";
+echo "<script>alert('Sua senha atual não é válida, tente novamente!!!')</script>";
 
 exit();
 
@@ -68,7 +68,7 @@ exit();
 
 if($new_pass!=$new_pass_again){
 
-echo "<script>alert('Your New Password dose not match')</script>";
+echo "<script>alert('Sua nova senha não confere!!!')</script>";
 
 exit();
 
@@ -80,7 +80,7 @@ $run_pass = mysqli_query($con,$update_pass);
 
 if($run_pass){
 
-echo "<script>alert('your Password Has been Changed Successfully')</script>";
+echo "<script>alert('Sua senha foi trocada com sucesso!!!')</script>";
 
 echo "<script>window.open('my_account.php?my_orders','_self')</script>";
 

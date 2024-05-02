@@ -20,11 +20,11 @@
           <a class="currency__change" href="customer/my_account.php?my_orders">
           <?php
           if(!isset($_SESSION['customer_email'])){
-          echo "Bem Vindo :Visitante"; 
+          echo "Bem Vindo: Visitante"; 
           }
           else
           { 
-              echo "Bem Vindo : " . $_SESSION['customer_email'] . "";
+              echo "Bem Vindo: " . $_SESSION['customer_email'] . "";
             }
 ?>
           </a>

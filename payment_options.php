@@ -19,7 +19,7 @@ $customer_id = $row_customer['customer_id'];
 
 <p class="lead text-center">
 
-<a href="order.php?c_id=<?php echo $customer_id; ?>">Pay Off line</a>
+<a href="order.php?c_id=<?php echo $customer_id; ?>">Compre no PIX</a>
 
 </p>
 

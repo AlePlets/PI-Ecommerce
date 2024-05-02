@@ -96,7 +96,7 @@ $check_cart = mysqli_num_rows($run_cart);
 
 if($check_customer==0){
 
-echo "<script>alert('password or email is wrong')</script>";
+echo "<script>alert('Email ou senha está errada!!!')</script>";
 
 exit();
 
@@ -106,7 +106,7 @@ if($check_customer==1 AND $check_cart==0){
 
 $_SESSION['customer_email']=$customer_email;
 
-echo "<script>alert('You are Logged In')</script>";
+echo "<script>alert('Você está logado!!!')</script>";
 
 echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
 
@@ -115,7 +115,7 @@ else {
 
 $_SESSION['customer_email']=$customer_email;
 
-echo "<script>alert('You are Logged In')</script>";
+echo "<script>alert('Você está logado!!!')</script>";
 
 echo "<script>window.open('checkout.php','_self')</script>";
 

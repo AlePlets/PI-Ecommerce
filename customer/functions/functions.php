@@ -75,7 +75,7 @@ $total += $sub_total;
 
 }
 
-echo "$" . $total;
+echo "R$" . $total;
 
 
 }

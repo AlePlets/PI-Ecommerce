@@ -67,9 +67,7 @@ $order_id = $_GET['order_id'];
 <select name="payment_mode" class="form-control"><!-- select Starts -->
 
 <option>Selecione o modo de pagamento</option>
-<option>Bank Code</option>
-<option>UBL/Omni</option>
-<option>Western Union</option>
+<option>PIX</option>
 
 </select><!-- select Ends -->
 
@@ -82,16 +80,6 @@ $order_id = $_GET['order_id'];
 <input type="text" class="form-control" name="ref_no" required>
 
 </div><!-- form-group Ends -->
-
-
-<div class="form-group"><!-- form-group Starts -->
-
-<label>Código OMNI:</label>
-
-<input type="text" class="form-control" name="code" required>
-
-</div><!-- form-group Ends -->
-
 
 <div class="form-group"><!-- form-group Starts -->
 

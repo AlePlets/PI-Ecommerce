@@ -20,7 +20,7 @@ include("includes/main.php");
     <!-- HERO -->
     <div class="nero">
       <div class="nero__heading">
-        <span class="nero__bold">Minha </span>Conta
+        <span class="nero__bold">Minha Conta</span>
       </div>
       <p class="nero__text">
       </p>
@@ -54,7 +54,7 @@ if(!empty($customer_confirm_code)){
 
 <div class="alert alert-danger"><!-- alert alert-danger Starts -->
 
-<strong> Warning! </strong> Confirme seu e -mail e se você não recebeu seu e -mail de confirmação
+<strong> Atenção! </strong> Confirme seu e -mail e se você não recebeu seu e -mail de confirmação,
 <a href="my_account.php?send_email" class="alert-link">
 
 Envie email novamente
@@ -85,7 +85,7 @@ $update_customer = "update customers set customer_confirm_code='' where customer
 
 $run_confirm = mysqli_query($con,$update_customer);
 
-echo "<script>alert('Your Email Has Been Confirmed')</script>";
+echo "<script>alert('seu Email Foi Confirmado')</script>";
 
 echo "<script>window.open('my_account.php?my_orders','_self')</script>";
 
@@ -105,7 +105,7 @@ Email Confirmation By Computerfever.com $c_name
 
 <a href='localhost/ecom_store/customer/my_account.php?$customer_confirm_code'>
 
-Click Here To Confirm Email
+Clique aqui para confirmar o e -mail
 
 </a>
 
@@ -117,7 +117,7 @@ $headers .= "Content-type: text/html\r\n";
 
 mail($c_email,$subject,$message,$headers);
 
-echo "<script>alert('Your Confirmation Email Has Been sent to you, check your inbox')</script>";
+echo "<script>alert('Seu e -mail de confirmação foi enviado para você, verifique sua caixa de entrada')</script>";
 
 echo "<script>window.open('my_account.php?my_orders','_self')</script>";
 

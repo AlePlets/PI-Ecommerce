@@ -201,7 +201,7 @@ $run_check = mysqli_query($con,$check_product);
 
 if(mysqli_num_rows($run_check)>0){
 
-echo "<script>alert('This Product is already added in cart')</script>";
+echo "<script>alert('Este produto já foi adicionado no carrinho')</script>";
 
 echo "<script>window.open('$pro_url','_self')</script>";
 
@@ -254,13 +254,13 @@ if($status == "product"){
 
 <div class="form-group"><!-- form-group Starts -->
 
-<label class="col-md-5 control-label" >Quantidade do Produto </label>
+<label class="col-md-5 control-label" >Quantidade do produto </label>
 
 <div class="col-md-7" ><!-- col-md-7 Starts -->
 
 <select name="product_qty" class="form-control" >
 
-<option>Selecionar Quantidade</option>
+<option>Selecionar quantidade</option>
 <option>1</option>
 <option>2</option>
 <option>3</option>
@@ -288,13 +288,13 @@ if($status == "product"){
 
 <div class="form-group"><!-- form-group Starts -->
 
-<label class="col-md-5 control-label" >Bundle Quantity </label>
+<label class="col-md-5 control-label" >Quantidade do produto</label>
 
 <div class="col-md-7" ><!-- col-md-7 Starts -->
 
 <select name="product_qty" class="form-control" >
 
-<option>Select quantity</option>
+<option>Selecionar quantidade</option>
 <option>1</option>
 <option>2</option>
 <option>3</option>
@@ -316,10 +316,10 @@ if($status == "product"){
 
 <select name="product_size" class="form-control" >
 
-<option>Select a Size</option>
-<option>Small</option>
-<option>Medium</option>
-<option>Large</option>
+<option>Selecione um tamanho</option>
+<option>Pequeno</option>
+<option>Médio</option>
+<option>Grande</option>
 
 
 </select>
@@ -346,9 +346,9 @@ echo "
 
 <p class='price'>
 
-Product Price : <del> R$$pro_price </del><br>
+Preço do produto : <del> R$$pro_price,00 </del><br>
 
-Product sale Price : R$$pro_psp_price
+Preço de venda do produto : R$$pro_psp_price,00
 
 </p>
 
@@ -361,7 +361,7 @@ echo "
 
 <p class='price'>
 
-Preço do Produto : R$$pro_price
+Preço do produto : R$$pro_price,00
 
 </p>
 
@@ -417,7 +417,7 @@ Bundle Price : $$pro_price
 
 <button class="btn btn-warning" type="submit" name="add_wishlist">
 
-<i class="fa fa-heart" ></i> Adicionar aos Favaritos
+<i class="fa fa-heart" ></i> Adicionar aos Favoritos
 
 </button>
 
@@ -536,7 +536,7 @@ echo "<script>window.open('$pro_url','_self')</script>";
 
 if($status == "product"){
 
-echo "Product Description";
+echo "Descrição do produto";
 
 }
 else{
@@ -551,15 +551,10 @@ echo "Bundle Description";
 
 <a class="btn btn-info tab" style="margin-bottom:10px;" href="#features" data-toggle="tab"><!-- btn btn-primary tab Starts -->
 
-Features
+Características
 
 </a><!-- btn btn-primary tab Ends -->
 
-<a class="btn btn-info tab" style="margin-bottom:10px;" href="#video" data-toggle="tab"><!-- btn btn-primary tab Starts -->
-
-Sounds and Videos
-
-</a><!-- btn btn-primary tab Ends -->
 
 <hr style="margin-top:0px;">
 
@@ -635,16 +630,16 @@ $pro_url = $row_products['product_url'];
 
 if($pro_label == "Sale" or $pro_label == "Gift"){
 
-$product_price = "<del> R$$pro_price </del>";
+$product_price = "<del> R$$pro_price,00 </del>";
 
-$product_psp_price = "| R$$pro_psp_price";
+$product_psp_price = "| R$$pro_psp_price,00";
 
 }
 else{
 
 $product_psp_price = "";
 
-$product_price = "R$$pro_price";
+$product_price = "R$$pro_price,00";
 
 }
 

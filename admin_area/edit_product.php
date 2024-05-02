@@ -338,7 +338,7 @@ echo "<option value='$cat_id'>$cat_title</option>";
 
 <div class="col-md-6" >
 
-<input type="text" name="product_price" class="form-control" required value="<?php echo $p_price; ?>" >
+<input type="number" name="product_price" class="form-control" required step="0.01" value="<?php echo $p_price; ?>">
 
 </div>
 

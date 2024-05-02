@@ -389,7 +389,7 @@ img {
 .page-header__topline .currency__change {
   display: block;
   color: #777;
-  font-size: 13px;
+  font-size: 17px;
   line-height: 45px;
   text-decoration: none;
   -webkit-transition: color .3s;

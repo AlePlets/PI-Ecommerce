@@ -20,11 +20,11 @@
           <a class="currency__change" href="my_account.php?my_orders">
           <?php
           if(!isset($_SESSION['customer_email'])){
-          echo "Bem Vindo :Visitante"; 
+          echo "Bem Vindo: Visitante"; 
           }
           else
           { 
-              echo "Bem Vindo : " . $_SESSION['customer_email'] . "";
+              echo "Bem Vindo: " . $_SESSION['customer_email'] . "";
             }
 ?>
           </a>
@@ -75,7 +75,7 @@ if(!isset($_SESSION['customer_email'])){
 
       <div class="logo">
           <a class="logo__link" href="../index.php">
-            <img class="logo__img" src="images/logo.png" alt="Avenue fashion logotype" width="300" height="19">
+            <img class="logo__img" src="images/logo.png" alt="Logotipo Pharmaplain" width="300" height="19">
           </a>
         </div>
 

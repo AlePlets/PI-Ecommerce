@@ -7,7 +7,7 @@
 
 <p class="text-muted" >
 
-Se você tiver alguma dúvida, sinta -se à vontade para<a href="../contact.php" > nos contactar,</a> Nosso centro de atendimento ao cliente está trabalhando para você 24/7.
+Se você tiver alguma dúvida, sinta -se à vontade para<a href="../contact.php" > nos contactar.</a> Nosso centro de atendimento ao cliente está trabalhando para você 24/7.
 
 
 </p>
@@ -26,7 +26,7 @@ Se você tiver alguma dúvida, sinta -se à vontade para<a href="../contact.php"
 <tr>
 
 <th>#</th>
-<th>Quantidade</th>
+<th>Valor</th>
 <th>Fatura</th>
 <th>Quantidade</th>
 <th>Data do Pedido</th>
@@ -67,7 +67,7 @@ $invoice_no = $row_orders['invoice_no'];
 
 $qty = $row_orders['qty'];
 
-$size = $row_orders['size'];
+
 
 $order_date = substr($row_orders['order_date'],0,11);
 
@@ -77,12 +77,12 @@ $i++;
 
 if($order_status=='pending'){
 
-$order_status = "<b style='color:red;'>Unpaid</b>";
+$order_status = "<b style='color:red;'>Não Pago</b>";
 
 }
 else{
 
-$order_status = "<b style='color:green;'>Paid</b>";
+$order_status = "<b style='color:green;'>Pago</b>";
 
 }
 
@@ -92,20 +92,19 @@ $order_status = "<b style='color:green;'>Paid</b>";
 
 <th><?php echo $i; ?></th>
 
-<td>$<?php echo $due_amount; ?></td>
+<td>R$<?php echo $due_amount; ?></td>
 
 <td><?php echo $invoice_no; ?></td>
 
 <td><?php echo $qty; ?></td>
 
-<td><?php echo $size; ?></td>
 
 <td><?php echo $order_date; ?></td>
 
 <td><?php echo $order_status; ?></td>
 
 <td>
-<a href="confirm.php?order_id=<?php echo $order_id; ?>" target="blank" class="btn btn-success btn-xs" > Confirm If Paid </a>
+<a href="confirm.php?order_id=<?php echo $order_id; ?>" target="blank" class="btn btn-success btn-xs" > Confirme pagamento </a>
 </td>
 
 
