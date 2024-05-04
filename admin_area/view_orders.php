@@ -20,7 +20,7 @@ else {
 
 <li class="active">
 
-<i class="fa fa-dashboard"></i> Dashboard / View Orders
+<i class="fa fa-dashboard"></i> Dashboard / Ver Pedidos
 
 </li>
 
@@ -41,7 +41,7 @@ else {
 
 <h3 class="panel-title"><!-- panel-title Starts -->
 
-<i class="fa fa-money fa-fw"></i> View Orders
+<i class="fa fa-money fa-fw"></i> Ver Pedidos
 
 </h3><!-- panel-title Ends -->
 
@@ -58,15 +58,15 @@ else {
 <tr>
 
 <th>#</th>
-<th>Customer</th>
-<th>Invoice</th>
-<th>Product</th>
-<th>Qty</th>
+<th>Cliente</th>
+<th>Fatura</th>
+<th>Produto</th>
+<th>Qtd</th>
 
-<th>Order Date</th>
-<th>Total Amount</th>
+<th>Data do Pedido</th>
+<th>Valor Total</th>
 <th>Status</th>
-<th>Action</th>
+<th>Ação</th>
 
 
 </tr>
@@ -165,12 +165,12 @@ echo $order_date;
 
 if($order_status=='pending'){
 
-echo $order_status='<div style="color:red;">Pending</div>';
+echo $order_status='<div style="color:red;">Pendente</div>';
 
 }
 else{
 
-echo $order_status='Completed';
+echo $order_status='Completo';
 
 }
 
