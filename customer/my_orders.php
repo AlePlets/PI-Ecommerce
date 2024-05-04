@@ -92,7 +92,7 @@ $order_status = "<b style='color:green;'>Pago</b>";
 
 <th><?php echo $i; ?></th>
 
-<td>R$<?php echo $due_amount; ?></td>
+<td>R$<?php echo $due_amount; ?>,00</td>
 
 <td><?php echo $invoice_no; ?></td>
 
