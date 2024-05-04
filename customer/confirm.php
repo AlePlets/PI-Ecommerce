@@ -135,7 +135,7 @@ $run_pending_order = mysqli_query($con,$update_pending_order);
 
 if($run_pending_order){
 
-echo "<script>alert('your Payment has been received,order will be completed within 24 hours')</script>";
+echo "<script>alert('Seu pagamento foi recebido, e o pedido estará pronto em 24 horas.')</script>";
 
 echo "<script>window.open('my_account.php?my_orders','_self')</script>";
 
